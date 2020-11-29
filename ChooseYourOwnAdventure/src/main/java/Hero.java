@@ -1,3 +1,4 @@
+import com.sun.jdi.ClassType;
 
 public class Hero {
 	private String name;
@@ -15,10 +16,13 @@ public class Hero {
 
 	}
 
-	Main main = new Main();
-
 	public String getName() {
 		return name;
+	}
+	
+
+	public void setName(String userInputName) {
+		this.name = userInputName;
 	}
 
 	public String gender(String userInputGender) {
@@ -73,87 +77,33 @@ public class Hero {
 		return userInputClass;
 	}
 
-	public String backStory() {
+	public String backStory(String userInputClass) {
 
-		if (userInputClass.equals("Paladin") { 
-			String backStory = "You lived without a permanent residence; I moved around a lot."
-					 "You had several friends, and your childhood was generally a happy one. "
-					 "You became a Noble because; Your family has a title, but none of your ancestors have distinguished themselves since we gained it."
-					 "You became a Paladin because; Becoming a paladin was a natural consequence of your unwavering faith. In taking your vows, you became the holy sword of your religion."
-					};
-
-		
-		if (userInputClass.equals("Rogue") { 
-			backStory = "You lived on the streets. You had a few close friends and lived an ordinary childhood. 
-					 	"You became a Urchin because; One day you woke up on the streets, alone and hungry, with no memory of your early childhood."
-						"You became a Rogue because; You decided to turn your natural lucky streak into the basis of a career, though you still realize that improving your skills is essential."
-		};
-
-		if (userInputClass.equals("Archer") { 
-			backStory = "You lived in a large house.
-						"You had a few close friends and lived an ordinary childhood.
-						"You became a Folk Hero because; You were always enamored by tales of heroes and wished you could be something more than ordinary.
-						"You became a Ranger because; You have seen what happens when the monsters come out from the dark. "
-						"You took it upon yourself to become the first line of defense against the evils that lie beyond civilization's borders."
-					};
+		if (userInputClass.equals("Paladin")) { 
+			 System.out.println("\n " + this.name  + " lived without a permanent residence; "+ this.pronouns[0]  + "  moved around a lot.\r\n" + 
+			 		 this.pronouns[0]  + " had several friends, and  "+ this.pronouns[2]  + " childhood was generally a happy one.\r\n" + 
+			 		 this.pronouns[0] + " became a Noble because;  "+ this.pronouns[2]  + " family had a title, but none of  "+ this.pronouns[0]  +" ancestors have distinguished themselves since they gained it.\r\n" + 
+			 		 this.pronouns[0] + " became a Paladin because; Becoming a paladin was a natural consequence of  "+ this.pronouns[0]  +"  unwavering faith. \r\n" + 
+			 		"In taking " + this.pronouns[0]  + " vows, "+ this.pronouns[0] + " became the holy sword of " + this.pronouns[2] + " religion.");
+			}
 
 		
+		if (userInputClass.equals("Rogue")) { 
+			 System.out.println("\n " + this.name  +" lived on the streets. "+ this.pronouns[0]  +" had a few close friends and lived an ordinary childhood. \r\n" + 
+					 this.pronouns[0]  + " became a Urchin because; One day "+ this.pronouns[0]  +" woke up on the streets, alone and hungry, with no memory of "+ this.pronouns[2]  +" early childhood.\r\n" + 
+					 this.name  + " became a Rogue because; "+ this.pronouns[0]  +"  decided to turn "+ this.pronouns[2]  +" natural lucky streak into the basis of a career, though "+ this.name  +" still realize that improving "+ this.pronouns[2]  +" skills is essential.\r\n"); 
+			}
 
-return backStory;
+		if (userInputClass.equals("Archer")) { 
+			System.out.println("\nYou lived in a large house.\r\n" + 
+					"You had a few close friends and lived an ordinary childhood.\r\n" + 
+					"You became a Folk Hero because; You were always enamored by tales of heroes and wished you could be something more than ordinary.\r\n" + 
+					"You became a Ranger because; You have seen what happens when the monsters come out from the dark. \"\r\n" + 
+					"You took it upon yourself to become the first line of defense against the evils that lie beyond civilization's borders.");
+			}
+
+		return backStory;
 	}
 
-//	public String userName (String userInputName) {
-//			
-//		userInputName = 
-//		
-//		
-//		return userInputName;
-//		
-//	}
-//
-////	public String getBackStory() {
-////		
-//		
-//		if (userInputClass.equals("Knight")
-//		String paladin = userName(" ")
-//				+ "'s curious, determined, thoughtful and perhaps a little too lonely. This isn't surprising considering for someone with "
-//				+ this.pronouns[2] + " position.\r\n" + "\r\n" + this.pronouns[0]
-//						+ " was born in a successful family in an average town. " + this.pronouns[0]
-//								+ " lived happily until " +  this.pronouns[0] + " was about 10 years old, but at that point life changed.\r\n" + "\r\n"
-//								+ this.pronouns[0] + " moved to another country and was becoming more cultured. With a great companion, "
-//								+ this.pronouns[0] + " is on top of the world in a wonderful world. But with " + this.pronouns[2]
-//										+ " curiosity and bravery, there's nothing to stop " + this.pronouns[1]  + " from reaching full potential. "
-//										+ this.pronouns[0] + " could quickly become somebody we can expect great things of.\r\n" + "\r\n"
-//										+ "But there may be more to it than this; " + this.pronouns[0] + " is currently still studying. "
-//										+ this.pronouns[0] + " feels like there's more to discover in this world. Luckily " + this.pronouns[0]
-//												+ " has awesome friends to support " + this.pronouns[2] + ".\r\n";
-//		
-//		String rogue = this.pronouns[0]
-//				+ "'s curious, determined, thoughtful and perhaps a little too lonely. This isn't surprising considering for someone with "
-//				+ this.pronouns[2] + " position.\r\n" + "\r\n" + this.pronouns[0]
-//						+ " was born in a successful family in an average town. " + this.pronouns[0]
-//								+ " lived happily until " +  this.pronouns[0] + " was about 10 years old, but at that point life changed.\r\n" + "\r\n"
-//								+ this.pronouns[0] + " moved to another country and was becoming more cultured. With a great companion, "
-//								+ this.pronouns[0] + " is on top of the world in a wonderful world. But with " + this.pronouns[2]
-//										+ " curiosity and bravery, there's nothing to stop " + this.pronouns[1]  + " from reaching full potential. "
-//										+ this.pronouns[0] + " could quickly become somebody we can expect great things of.\r\n" + "\r\n"
-//										+ "But there may be more to it than this; " + this.pronouns[0] + " is currently still studying. "
-//										+ this.pronouns[0] + " feels like there's more to discover in this world. Luckily " + this.pronouns[0]
-//												+ " has awesome friends to support " + this.pronouns[2] + ".\r\n";
-//		
-//		String archer = this.pronouns[0]
-//				+ "'s curious, determined, thoughtful and perhaps a little too lonely. This isn't surprising considering for someone with "
-//				+ this.pronouns[2] + " position.\r\n" + "\r\n" + this.pronouns[0]
-//						+ " was born in a successful family in an average town. " + this.pronouns[0]
-//								+ " lived happily until " +  this.pronouns[0] + " was about 10 years old, but at that point life changed.\r\n" + "\r\n"
-//								+ this.pronouns[0] + " moved to another country and was becoming more cultured. With a great companion, "
-//								+ this.pronouns[0] + " is on top of the world in a wonderful world. But with " + this.pronouns[2]
-//										+ " curiosity and bravery, there's nothing to stop " + this.pronouns[1]  + " from reaching full potential. "
-//										+ this.pronouns[0] + " could quickly become somebody we can expect great things of.\r\n" + "\r\n"
-//										+ "But there may be more to it than this; " + this.pronouns[0] + " is currently still studying. "
-//										+ this.pronouns[0] + " feels like there's more to discover in this world. Luckily " + this.pronouns[0]
-//												+ " has awesome friends to support " + this.pronouns[2] + ".\r\n";
-//		
-//		return backStory;
-//	}
+
 }
