@@ -80,7 +80,7 @@ public class Hero {
 	public String backStory(String userInputClass) {
 
 		if (userInputClass.equals("Paladin")) { 
-			 System.out.println("\n " + this.name  + " lived without a permanent residence; "+ this.pronouns[0]  + "  moved around a lot.\r\n" + 
+			 System.out.println("\n" + this.name  + " lived without a permanent residence; "+ this.pronouns[0]  + "  moved around a lot.\r\n" + 
 			 		 this.pronouns[0]  + " had several friends, and  "+ this.pronouns[2]  + " childhood was generally a happy one.\r\n" + 
 			 		 this.pronouns[0] + " became a Noble because;  "+ this.pronouns[2]  + " family had a title, but none of  "+ this.pronouns[0]  +" ancestors have distinguished themselves since they gained it.\r\n" + 
 			 		 this.pronouns[0] + " became a Paladin because; Becoming a paladin was a natural consequence of  "+ this.pronouns[0]  +"  unwavering faith. \r\n" + 
@@ -89,16 +89,16 @@ public class Hero {
 
 		
 		if (userInputClass.equals("Rogue")) { 
-			 System.out.println("\n " + this.name  +" lived on the streets. "+ this.pronouns[0]  +" had a few close friends and lived an ordinary childhood. \r\n" + 
+			 System.out.println("\n" + this.name  +" lived on the streets. "+ this.pronouns[0]  +" had a few close friends and lived an ordinary childhood. \r\n" + 
 					 this.pronouns[0]  + " became a Urchin because; One day "+ this.pronouns[0]  +" woke up on the streets, alone and hungry, with no memory of "+ this.pronouns[2]  +" early childhood.\r\n" + 
 					 this.name  + " became a Rogue because; "+ this.pronouns[0]  +"  decided to turn "+ this.pronouns[2]  +" natural lucky streak into the basis of a career, though "+ this.name  +" still realize that improving "+ this.pronouns[2]  +" skills is essential.\r\n"); 
 			}
 
 		if (userInputClass.equals("Archer")) { 
-			System.out.println("\nYou lived in a large house.\r\n" + 
-					"You had a few close friends and lived an ordinary childhood.\r\n" + 
-					"You became a Folk Hero because; You were always enamored by tales of heroes and wished you could be something more than ordinary.\r\n" + 
-					"You became a Ranger because; You have seen what happens when the monsters come out from the dark. \"\r\n" + 
+			System.out.println("\n" + this.name + " lived in a large house.\r\n" + 
+					this.pronouns[0] + " had a few close friends and lived an ordinary childhood.\r\n" + 
+					this.pronouns[0] + " became a Folk Hero because; " + this.pronouns[0] + " were always enamored by tales of heroes and wished  "+ this.pronouns[0] +" could be something more than ordinary.\r\n" + 
+					this.pronouns[0] + " became a Ranger because; "+ this.pronouns[0] + " have seen what happens when the monsters come out from the dark. \"\r\n" + 
 					"You took it upon yourself to become the first line of defense against the evils that lie beyond civilization's borders.");
 			}
 
