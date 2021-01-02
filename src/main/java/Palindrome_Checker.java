@@ -6,14 +6,20 @@ public class Palindrome_Checker {
 
 	public static void main(String[] args) {
 
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Please enter a word to check if it's a palindrome: " + "\n");
+		Boolean play = true;
+		while (play) {
 
-		String userInput = scan.nextLine();
-		System.out.println("\n" + palindromeCheck(userInput) + "\n");
+			Scanner scan = new Scanner(System.in);
+			System.out.println("\n" + "Please enter a word to check if it's a palindrome: " + "\n");
 
-		Palindrome_Checker check = new Palindrome_Checker();
-		check.continuePlaying();
+			String userInput = scan.nextLine();
+			System.out.println("\n" + palindromeCheck(userInput) + "\n");
+
+			System.out.println("Would you like to try another word? Y/N" + "\n");
+			play = scan.nextLine().trim().equalsIgnoreCase("y");
+
+		}
+		System.out.println("\n" + "Thanks for playing!");
 
 	}
 
@@ -58,26 +64,4 @@ public class Palindrome_Checker {
 		return result;
 	}
 
-	public void continuePlaying() {
-
-		Scanner scan = new Scanner(System.in);
-		String choice = scan.nextLine();
-
-		
-			System.out.println("Would you like to try another word? Y/N" + "\n");
-
-			while (!choice.equalsIgnoreCase("Y")) {
-				System.out.println("\n" + "Please enter another word to check if it's a palindrome: " + "\n");
-				String userInput = scan.nextLine();
-				System.out.println("\n" + palindromeCheck(userInput) + "\n");
-			}
-
-			if (choice.equalsIgnoreCase("N") || choice.equalsIgnoreCase("Q")) {
-				System.out.println("Thanks for playing!");
-				System.exit(0);
-			}
-
-		
-
-	}
 }
