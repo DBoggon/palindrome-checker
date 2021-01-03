@@ -26,7 +26,7 @@ public class Palindrome_Checker {
 	public static String palindromeCheck(String str) {
 
 		String result = null;
-
+		
 		String compareFirst = str.toLowerCase().substring(0, (str.length() / 2));
 		String compareLast = null;
 		int checkLength = str.length() % 2;
